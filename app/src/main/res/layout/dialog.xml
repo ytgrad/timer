@@ -67,8 +67,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/start"
-        android:backgroundTint="@color/blue"
+        android:backgroundTint="@color/charcoal"
         app:cornerRadius="8dp"
+        android:textColor="@color/white"
         android:layout_gravity="end"
         android:layout_marginEnd="8dp"
         android:layout_marginTop="16dp"/>

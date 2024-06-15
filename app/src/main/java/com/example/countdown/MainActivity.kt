@@ -18,13 +18,11 @@ import com.example.countdown.databinding.DialogBinding
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
-
     private var countdownTimer: CountDownTimer? = null
     private var remainingMilliseconds = 0L
     private var isTimerPaused = false
     override fun onCreate(savedInstanceState: Bundle?) {
         binding = ActivityMainBinding.inflate(layoutInflater)
-
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(binding.root)
@@ -56,16 +54,13 @@ class MainActivity : AppCompatActivity() {
             binding.tvMinutes.text = getString(R.string._00)
             binding.tvMilliseconds.text = getString(R.string._00)
         }
-
     }
-
     private fun showTimeDialog(){
         val bindingDialog: DialogBinding = DialogBinding.inflate(layoutInflater)
         val dialogBuilder = AlertDialog.Builder(this).setView(bindingDialog.root)
         val timeDialog = dialogBuilder.create()
 
         bindingDialog.btnStartDialog.setOnClickListener {
-            Toast.makeText(this, "clicked", Toast.LENGTH_SHORT).show()
             val hours = if (bindingDialog.etHours.text.toString().toLongOrNull() == null) 0 else bindingDialog.etHours.text.toString().toLong()
             val mins = if (bindingDialog.etMinutes.text.toString().toLongOrNull() == null) 0 else bindingDialog.etMinutes.text.toString().toLong()
             val secs = if (bindingDialog.etSeconds.text.toString().toLongOrNull() == null) 0 else bindingDialog.etSeconds.text.toString().toLong()
@@ -75,7 +70,6 @@ class MainActivity : AppCompatActivity() {
             startCountdown(duration)
             timeDialog.dismiss()
         }
-
         timeDialog.show()
     }
     private fun startCountdown(duration: Long){
