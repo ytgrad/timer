@@ -2,4 +2,9 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="matteblack">#FF909090</color>
+    <color name="cyan">#FF00FFFF</color>
+    <color name="blue">#FF0000FF</color>
+    <color name="egyptianBlue">#1434A4</color>
+    <color name="charcoal">#36454F</color>
 </resources>
