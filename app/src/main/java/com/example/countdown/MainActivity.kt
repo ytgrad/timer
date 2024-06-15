@@ -37,7 +37,24 @@ class MainActivity : AppCompatActivity() {
             showTimeDialog()
         }
         binding.btnPause.setOnClickListener {
-
+            if (isTimerPaused){
+                startCountdown(remainingMilliseconds)
+                isTimerPaused = false
+                binding.btnPause.text = getString(R.string.pause)
+            }else{
+                countdownTimer?.cancel()
+                isTimerPaused = true
+                binding.btnPause.text = getString(R.string.resume)
+            }
+        }
+        binding.btnReset.setOnClickListener {
+            countdownTimer?.cancel()
+            remainingMilliseconds = 0
+            binding.tvHours.text = getString(R.string._00)
+            binding.tvMinutes.text = getString(R.string._00)
+            binding.tvSeconds.text = getString(R.string._00)
+            binding.tvMinutes.text = getString(R.string._00)
+            binding.tvMilliseconds.text = getString(R.string._00)
         }
 
     }

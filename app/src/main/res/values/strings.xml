@@ -2,6 +2,7 @@
     <string name="app_name">countDown</string>
     <string name="reset">RESET</string>
     <string name="pause">PAUSE</string>
+    <string name="resume">RESUME</string>
     <string name="start">START</string>
     <string name="colon">:</string>
     <string name="_00">00</string>
